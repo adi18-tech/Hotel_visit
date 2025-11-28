@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold text-danger" href="#">TravelVista</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#travelNavbar" aria-controls="travelNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="travelNavbar">
+      <!-- Left Panel -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/listings">All Listings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/listings/new">Add New Listing</a>
+        </li>
+      </ul>
+
+       
+     <!-- Right Panel -->
+   <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <% if (!currentUser) { %>
+     <li class="nav-item">
+      <a class="nav-link" href="/register">Sign Up</a>
+     </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/login">Login</a>
+    </li>
+  <% } else { %>
+    <li class="nav-item">
+      <a class="nav-link" href="/logout">Logout</a>
+    </li>
+  <% } %>
+</ul>
+
+    </div>
+  </div>
+</nav>
